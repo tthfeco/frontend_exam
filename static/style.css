@@ -20,7 +20,7 @@ body{
   text-align: center;
 }
 
-.cards { /* változtatni container miatt*/
+.conatiner { /* változtatni container miatt*/
   display: grid;
   margin: 1rem;
   gap: 1rem;

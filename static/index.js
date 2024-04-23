@@ -19,10 +19,6 @@ function main() {
 
   const conatiner = createEl('section', 'conatiner');
   root.append(conatiner);
-
-  const cards = createEl('div', 'cards');
-  conatiner.append(cards);
-
   
   const titles = Object.keys(data).map(key => data[key].title)
   const images = Object.keys(data).map(key => data[key].image)
@@ -50,11 +46,8 @@ function main() {
     textBody.innerText = texts[i];
     cardBody.append(textBody);
 
-    cards.append(card);
+    conatiner.append(card);
   }
-
-
-  cards.append(card);
 
 }
 
