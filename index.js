@@ -38,15 +38,26 @@ export function wordFrequency(text) {
   const words = text.toLowerCase().split(' ');
   let result = {};
 
-  for (const word of words) {
+  if (text === ''){
+    return {};
+  }
+
+  let wordsNoSpaces = [];
+
+  for (const word of words){
+    if (word !== ''){
+      wordsNoSpaces.push(word)
+    }
+  }
+
+  for (const word of wordsNoSpaces) {
     if (!result.hasOwnProperty(word)) {
       result[word] = 1;
     } else {
       result[word]++
     }
   }
-
-  console.log(result);
+  return result;
 }
 
 // Task: Top N Frequent Words
