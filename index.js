@@ -35,7 +35,8 @@ export function reverseWords(sentence) {
 // - The function should not count punctuation as part of the words.
 // - Return the result with words in lowercase.
 export function wordFrequency(text) {
-  const words = text.toLowerCase().split(' ');
+  
+  const words = text.toLowerCase().replace(/[!,']/g, '').split(' ');
   let result = {};
 
   if (text === ''){
@@ -72,4 +73,14 @@ export function wordFrequency(text) {
 export function topNFrequentWords(text, n) {
   text = text.toLowerCase();
   const words = text.split(' ');
+
+  let result = [];
+
+  if (text === ''){
+    return [];
+  }
+
+  console.log(words);
 }
+
+console.log(topNFrequentWords('This is a test. This is only a test.'));
