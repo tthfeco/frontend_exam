@@ -62,3 +62,15 @@ body{
   width: 100%;
   height: auto;
 }
+
+@media screen and (max-width: 820px) { /* iPad air*/
+  .conatiner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) { /* Xr */
+  .conatiner {
+    grid-template-columns: 1fr;
+  }
+}
