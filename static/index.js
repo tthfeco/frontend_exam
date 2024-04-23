@@ -1,6 +1,7 @@
 import data from './data.js';
 
-const root = document.querySelector('#root')
+const root = document.querySelector('#root');
+
 function createEl(tagName, classN) {
   const el = document.createElement(tagName);
   el.className = classN;
