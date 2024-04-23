@@ -24,8 +24,6 @@ export function reverseWords(sentence) {
   return reverseWords.join(' ');
 }
 
-console.log(reverseWords('The   quick   brown    fox'));
-
 // Task: Word Frequency Counter
 // Given a string of text, write a function `wordFrequency` that counts the
 // frequency of each unique word in the text. The function should return an
