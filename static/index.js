@@ -14,6 +14,7 @@ function main() {
   root.append(introEl);
 
   const header = createEl('h1', 'intro__header');
+  header.innerText = 'Visualized and clarifed by AI.'
   introEl.append(header);
 
   const conatiner = createEl('section', 'conatiner');
