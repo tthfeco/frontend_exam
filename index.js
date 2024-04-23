@@ -74,18 +74,6 @@ export function topNFrequentWords(text, n) {
   text = text.toLowerCase().replace(/[!,.']/g, '');
   const words = text.split(' ');
 
-  let freqWords = [];
-
-  for (let i = 0; i < words.length; i++){
-    let freqWord = words[i];
-    let times = 0;
-    count(words[i], words);
-  }
-
-  if (text === '') {
-    return [];
-  }
-
   console.log(words);
 }
 
