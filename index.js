@@ -9,12 +9,12 @@ export function reverseWords(sentence) {
   const words = sentence.trim().split(' ');
   let wordsNoSpaces = [];
 
-  if (sentence === ''){
+  if (sentence === '') {
     return '';
   }
 
-  for (const word of words){
-    if (word !== ''){
+  for (const word of words) {
+    if (word !== '') {
       wordsNoSpaces.push(word)
     }
   }
@@ -35,18 +35,18 @@ export function reverseWords(sentence) {
 // - The function should not count punctuation as part of the words.
 // - Return the result with words in lowercase.
 export function wordFrequency(text) {
-  
+
   const words = text.toLowerCase().replace(/[!,']/g, '').split(' ');
   let result = {};
 
-  if (text === ''){
+  if (text === '') {
     return {};
   }
 
   let wordsNoSpaces = [];
 
-  for (const word of words){
-    if (word !== ''){
+  for (const word of words) {
+    if (word !== '') {
       wordsNoSpaces.push(word)
     }
   }
@@ -70,13 +70,29 @@ export function wordFrequency(text) {
 // - Text is case-insensitive.
 // - Words are separated by spaces, and the text may contain punctuation.
 // - Ignore punctuation, and consider only alphabetic characters for word separation.
+function count(countedWord, wordsArr) {
+  let counter = 0;
+  for (const word of wordsArr){
+    if (countedWord === word){
+      counter++;
+    }
+  }
+  return counter;
+}
+
 export function topNFrequentWords(text, n) {
-  text = text.toLowerCase();
+  text = text.toLowerCase().replace(/[!,.']/g, '');
   const words = text.split(' ');
 
-  let result = [];
+  let freqWords = [];
 
-  if (text === ''){
+  for (let i = 0; i < words.length; i++){
+    let freqWord = words[i];
+    let times = 0;
+    count(words[i], words);
+  }
+
+  if (text === '') {
     return [];
   }
 
