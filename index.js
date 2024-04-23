@@ -13,8 +13,6 @@ export function reverseWords(sentence) {
   return reverseWords.join(' ');
 }
 
-console.log(reverseWords('hello world'));
-
 // Task: Word Frequency Counter
 // Given a string of text, write a function `wordFrequency` that counts the
 // frequency of each unique word in the text. The function should return an
@@ -39,8 +37,6 @@ export function wordFrequency(text) {
 
   console.log(result);
 }
-
-wordFrequency('HELLO Hello hello');
 
 // Task: Top N Frequent Words
 // Write a function `topNFrequentWords(text, n)` that finds the top `n` most frequent words in a given text.
