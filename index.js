@@ -7,15 +7,16 @@
 // - Consider only spaces as word separators (no punctuation splitting).
 export function reverseWords(sentence) {
   const words = sentence.split('');
-  let result = '';
+  let result = [];
+
 
   for (let i = words.length; i > 0; i++) {
-    result += words[i];
+    result.push(words[i]);
   }
 
   console.log(result);
 
-  return result;
+  return result.join('');
 }
 
 // Task: Word Frequency Counter
