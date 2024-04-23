@@ -6,18 +6,14 @@
 // - Words are separated by spaces, and the sentence may contain leading or trailing spaces.
 // - Consider only spaces as word separators (no punctuation splitting).
 export function reverseWords(sentence) {
-  const words = sentence.split('');
-  let result = [];
+  const words = sentence.split(' ');
 
+  const reverseWords = words.reverse();
 
-  for (let i = words.length; i > 0; i++) {
-    result.push(words[i]);
-  }
-
-  console.log(result);
-
-  return result.join('');
+  return reverseWords.join(' ');
 }
+
+console.log(reverseWords('hello world'));
 
 // Task: Word Frequency Counter
 // Given a string of text, write a function `wordFrequency` that counts the
