@@ -26,8 +26,21 @@ console.log(reverseWords('hello world'));
 // - The function should not count punctuation as part of the words.
 // - Return the result with words in lowercase.
 export function wordFrequency(text) {
-  
+  const words = text.toLowerCase().split(' ');
+  let result = {};
+
+  for (const word of words) {
+    if (!result.hasOwnProperty(word)) {
+      result[word] = 1;
+    } else {
+      result[word]++
+    }
+  }
+
+  console.log(result);
 }
+
+wordFrequency('HELLO Hello hello');
 
 // Task: Top N Frequent Words
 // Write a function `topNFrequentWords(text, n)` that finds the top `n` most frequent words in a given text.
