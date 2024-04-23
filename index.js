@@ -7,13 +7,24 @@
 // - Consider only spaces as word separators (no punctuation splitting).
 export function reverseWords(sentence) {
   const words = sentence.trim().split(' ');
+  let wordsNoSpaces = [];
 
-  const reverseWords = words.reverse();
+  if (sentence === ''){
+    return '';
+  }
+
+  for (const word of words){
+    if (word !== ''){
+      wordsNoSpaces.push(word)
+    }
+  }
+
+  const reverseWords = wordsNoSpaces.reverse();
 
   return reverseWords.join(' ');
 }
 
-console.log(reverseWords('   Hello   world   '));
+console.log(reverseWords('The   quick   brown    fox'));
 
 // Task: Word Frequency Counter
 // Given a string of text, write a function `wordFrequency` that counts the
