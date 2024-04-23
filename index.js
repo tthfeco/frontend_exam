@@ -90,6 +90,11 @@ export function topNFrequentWords(text, n) {
     }
   }
 
+  for (const word in countedWords){
+    result.push(word);
+    result.push(countedWords[word])
+  }
+
   return result;
 }
 
