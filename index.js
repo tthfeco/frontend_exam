@@ -70,16 +70,6 @@ export function wordFrequency(text) {
 // - Text is case-insensitive.
 // - Words are separated by spaces, and the text may contain punctuation.
 // - Ignore punctuation, and consider only alphabetic characters for word separation.
-function count(countedWord, wordsArr) {
-  let counter = 0;
-  for (const word of wordsArr){
-    if (countedWord === word){
-      counter++;
-    }
-  }
-  return counter;
-}
-
 export function topNFrequentWords(text, n) {
   text = text.toLowerCase().replace(/[!,.']/g, '');
   const words = text.split(' ');
