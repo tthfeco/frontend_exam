@@ -74,6 +74,10 @@ export function topNFrequentWords(text, n) {
   text = text.toLowerCase().replace(/[!,.']/g, '');
   const words = text.split(' ');
 
+  if (text === ''){
+    return '';
+  }
+
   let result = [];
 
   let countedWords = {};
@@ -86,7 +90,7 @@ export function topNFrequentWords(text, n) {
     }
   }
 
-  console.log(countedWords);
+  return result;
 }
 
 console.log(topNFrequentWords('This is a test. This is only a test.'));
