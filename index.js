@@ -52,4 +52,6 @@ wordFrequency('HELLO Hello hello');
 // - Words are separated by spaces, and the text may contain punctuation.
 // - Ignore punctuation, and consider only alphabetic characters for word separation.
 export function topNFrequentWords(text, n) {
+  text = text.toLowerCase();
+  const words = text.split(' ');
 }
