@@ -40,6 +40,7 @@ function main() {
 
     const img = createEl('img', '');
     img.src = images[i];
+    img.alt = titles[i];
     cardBody.append(img);
 
     const textBody = createEl('div', 'card__body__text');

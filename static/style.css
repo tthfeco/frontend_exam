@@ -21,7 +21,7 @@ body{
   text-align: center;
 }
 
-.conatiner { /* változtatni container miatt*/
+.conatiner { 
   display: grid;
   margin: 1rem;
   gap: 1rem;
